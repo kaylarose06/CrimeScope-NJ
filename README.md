@@ -1,6 +1,6 @@
 # CrimeScope-NJ
 
-# CrimeScope NJ is an interactive web tool that allows users to examine crime statistics in New Jersey according to a number of criteria, including demographics, crime categories, and weather. The user has a number of possibilities, such as searching for the most frequent crimes by weather, figuring out which weather patterns correspond to which kinds of crimes, or getting demographic data about certain crimes. The application also enables users to forecast the most frequent crime by county and weather conditions, or by specific weather and demographic data. To help the user do these activities, the program offers an interactive, dialogue-style interface that presents real-time data insights in an easy-to-understand way.
+CrimeScope NJ is an interactive web tool that allows users to examine crime statistics in New Jersey according to a number of criteria, including demographics, crime categories, and weather. The user has a number of possibilities, such as searching for the most frequent crimes by weather, figuring out which weather patterns correspond to which kinds of crimes, or getting demographic data about certain crimes. The application also enables users to forecast the most frequent crime by county and weather conditions, or by specific weather and demographic data. To help the user do these activities, the program offers an interactive, dialogue-style interface that presents real-time data insights in an easy-to-understand way.
 
 # Code Files: 
 
