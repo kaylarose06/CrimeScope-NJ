@@ -1,0 +1,61 @@
+lat,lon,county,household_income,median_age,education_level,population_density,unemployment_rate,race_majority,average_family_size
+41.3283,-75.0351,Middlesex,70753,36,Bachelor's,3342,3.56,White,2.9
+40.7106,-74.9127,Hunterdon,127262,49,Bachelor's,2711,6.27,Hispanic,3.3
+40.1431,-74.3959,Morris,147629,39,Doctorate,6703,8.68,White,3.3
+40.9876,-73.9404,Bergen,120607,44,Master's,7895,8.57,Hispanic,3.1
+41.2606,-75.2083,Burlington,85209,28,Associate's,2449,3.03,White,3.7
+41.1431,-74.7955,Camden,102066,48,High School,2339,3.56,Black,3.2
+41.2037,-74.2349,Middlesex,78728,45,Doctorate,7117,3.11,White,3.8
+39.1545,-74.7594,Monmouth,31767,34,Bachelor's,9980,4.24,White,4.0
+39.799,-75.1274,Camden,85824,42,Associate's,2874,4.79,Mixed,3.0
+39.8769,-75.4007,Hudson,117368,47,Master's,5708,7.55,White,2.5
+40.8362,-75.3492,Somerset,98665,33,Associate's,988,9.51,Black,3.1
+40.6597,-74.2492,Camden,98958,39,Associate's,3913,8.85,Black,3.5
+39.502,-74.9612,Warren,116826,44,Doctorate,5958,9.31,Black,3.0
+41.1779,-75.3005,Salem,78752,27,High School,1081,4.4,White,3.7
+40.1615,-75.4601,Union,111263,46,Associate's,1221,4.5,Mixed,3.8
+40.3618,-74.0872,Morris,67494,36,Associate's,9851,4.34,Black,3.8
+41.1884,-75.2595,Somerset,55964,36,Associate's,8848,9.97,Mixed,3.9
+39.3878,-74.039,Salem,128471,43,Doctorate,4101,5.29,Mixed,3.0
+39.3447,-75.3555,Warren,41628,40,Master's,9832,5.05,Mixed,3.9
+40.4598,-75.2724,Monmouth,101477,44,High School,7669,3.58,Black,3.9
+40.6911,-74.5353,Bergen,129722,33,High School,2835,5.82,Black,2.9
+39.8777,-73.9508,Warren,145798,38,Bachelor's,6492,8.05,White,3.7
+40.219,-74.7913,Cape May,114775,47,High School,9203,4.58,Black,3.6
+39.3163,-74.3479,Salem,120694,47,Associate's,5535,4.5,Asian,3.1
+39.4456,-74.8757,Monmouth,136979,38,Doctorate,5880,9.58,Black,2.9
+41.2537,-75.1703,Mercer,86931,29,High School,8713,9.23,White,3.0
+40.885,-75.0634,Cape May,144283,25,Master's,6772,7.44,Hispanic,3.0
+40.2404,-75.1943,Ocean,51066,48,Doctorate,1660,7.14,Hispanic,3.5
+40.37,-75.3914,Ocean,142891,31,Doctorate,1704,9.32,Hispanic,3.6
+40.775,-75.0539,Warren,63369,39,Doctorate,4855,5.71,White,3.7
+41.0598,-75.039,Sussex,94555,27,High School,2640,8.76,Hispanic,3.2
+41.0826,-75.2919,Passaic,99307,33,Doctorate,8516,6.17,White,3.2
+41.2335,-74.6982,Atlantic,81058,35,High School,5129,6.17,Asian,3.1
+39.2193,-74.2677,Burlington,55756,48,Master's,8890,4.37,Hispanic,2.9
+40.9114,-74.6546,Middlesex,104742,35,Bachelor's,9142,6.29,Mixed,3.0
+39.4608,-75.2224,Warren,130485,26,Associate's,2772,8.1,Mixed,2.5
+40.0984,-74.1567,Union,113140,37,Master's,8085,7.6,Black,2.9
+39.7021,-74.2288,Hudson,40620,34,High School,7634,3.03,Mixed,3.2
+40.9776,-74.2604,Atlantic,40730,44,High School,9114,9.2,Black,3.2
+41.0752,-74.369,Passaic,137907,48,Associate's,8993,3.45,Mixed,3.0
+39.8203,-74.9032,Ocean,65489,31,Doctorate,2457,9.42,Asian,3.2
+39.0592,-74.8922,Cape May,46461,40,High School,5003,7.87,Asian,3.4
+41.345,-74.1868,Cumberland,108463,50,Doctorate,4413,4.82,Black,3.6
+40.4671,-74.2018,Sussex,64549,32,Associate's,907,3.23,White,3.1
+40.1415,-73.9613,Mercer,75695,48,High School,9933,7.38,Hispanic,2.9
+41.1795,-74.5856,Somerset,64098,32,Master's,6755,9.01,White,3.2
+39.6055,-74.5859,Sussex,113126,31,Doctorate,6583,6.67,Black,3.7
+39.7043,-74.0131,Middlesex,87232,31,Associate's,7269,7.69,Black,2.9
+39.5766,-75.5646,Warren,98153,27,Associate's,1260,8.05,Black,3.1
+39.9051,-75.3379,Hudson,40216,29,Associate's,7639,4.66,Mixed,2.5
+38.957,-74.5492,Cape May,71110,47,High School,3829,8.75,Hispanic,3.9
+39.4438,-74.516,Morris,65131,42,Master's,9925,8.7,White,2.6
+41.2389,-75.3928,Salem,149525,36,Associate's,3057,3.02,Hispanic,2.5
+40.3959,-74.213,Mercer,143220,29,Associate's,7019,3.33,Black,3.0
+39.9893,-74.2753,Cape May,146082,30,Doctorate,4515,3.07,Black,3.4
+39.2133,-75.3534,Passaic,59456,47,Master's,3086,3.34,White,3.1
+39.7786,-75.3341,Gloucester,37139,25,Doctorate,9208,5.14,Asian,2.9
+39.7585,-73.9252,Monmouth,127493,46,Associate's,9433,9.91,Hispanic,3.8
+40.4556,-75.4032,Monmouth,87015,46,Doctorate,7929,9.41,Black,3.9
+39.2205,-74.9083,Cape May,80142,42,Bachelor's,3667,9.39,Asian,3.5
