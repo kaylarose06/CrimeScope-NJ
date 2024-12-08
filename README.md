@@ -8,14 +8,24 @@ CrimeScope NJ is an interactive web tool that allows users to examine crime stat
 https://youtu.be/8xeAs8dRwfY
 
 # Setup Instructions: 
-To run:
 
-```python testing.py```
+**Download these libraries:**
 
-Download these libraries: 
+```
+pip install scikit-learn pandas
+```
 
-```pip install scikit-learn pandas```
-``pip install pandas```
+```
+pip install pandas
+```
+
+
+**To run:**
+
+```
+python testing.py
+```
+
 
 # Code Files: 
 
