@@ -7,6 +7,16 @@ CrimeScope NJ is an interactive web tool that allows users to examine crime stat
 # Demo Video: 
 https://youtu.be/8xeAs8dRwfY
 
+# Setup Instructions: 
+To run:
+
+```python testing.py```
+
+Download these libraries: 
+
+```pip install scikit-learn pandas```
+``pip install pandas```
+
 # Code Files: 
 
 **testing.py** - This script lets you dig into crime data like a detective on a coffee binge. You can figure out which crimes are most common during certain weather, or which weather shows up with different crime types. Plus, you can check out the demographics of a county based on crime data. And for the big finale, you can make your own crime predictions based on weather or county stats using our shiny trained model. So, pick an option, dive in, and let's solve some crime (or at least talk about it)!
