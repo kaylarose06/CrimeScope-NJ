@@ -19,6 +19,15 @@ pip install scikit-learn pandas
 pip install pandas
 ```
 
+**Update your file paths in testing.py:** 
+
+```
+crime_data_file = "path_to_your_downloaded_csv_file.csv"
+fake_weather_file = "path_to_your_downloaded_csv_file.csv"
+demographic_data_file = "path_to_your_downloaded_csv_file.csv"
+output_file = "path_to_your_downloaded_csv_file.csv"
+cache_file = "path_to_your_downloaded_csv_file.csv"
+```
 
 **To run:**
 
