@@ -22,6 +22,7 @@ CrimeScope NJ is an interactive web tool that allows users to examine crime stat
 In the future, we would like to implement the following: 
 
 **Event Data**
+
 Goal: Explore if public events correlate with increased crime activity, focusing on dates, locations, and event types 
 
 Data Source: Eventbrite API, Facebook Graph API (info on public events and large-scale events) 
@@ -31,6 +32,7 @@ Pull event data for specific time frames and locations.
 Store the event name, type, location, and date in a table, then join it with the crime data by date and location to identify if events coincide with increased incidents.
 
 **Social Media Data**
+
 Goal:  Capture real-time crime signals, using keywords from social media posts as early indicators or to verify crime incidents.
 
 Data Source: Twitter API, Reddit API 
@@ -40,6 +42,7 @@ Use Twitter’s API to retrieve posts containing relevant crime-related keywords
 Filter and clean these posts, saving information on date, location, and keywords, which could be matched with the crime dataset to analyze real-time trends.
 
 **Mapping and Geolocation Data**
+
 Goal: Visualize crime hotspots and trends using geographic data.
 
 Data Source: Google Maps API, OpenStreetMap  
