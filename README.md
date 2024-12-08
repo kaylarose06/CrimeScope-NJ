@@ -29,16 +29,23 @@ python testing.py
 
 # Code Files: 
 
-**testing.py** - This script lets you dig into crime data like a detective on a coffee binge. You can figure out which crimes are most common during certain weather, or which weather shows up with different crime types. Plus, you can check out the demographics of a county based on crime data. And for the big finale, you can make your own crime predictions based on weather or county stats using our shiny trained model. So, pick an option, dive in, and let's solve some crime (or at least talk about it)!
+**testing.py:** Explore crime data—find patterns by weather, demographics, or counties. Use the trained model to predict crimes based on weather or stats.
 
-**menu.py** - This script prints out everything that is displayed in the program. 
+**menu.py:** Displays the program's options and menus.
 
-**demographics.py** - This script helps you figure out where crime is most common in New Jersey and what the demographics of those places look like. The first function, get_county_with_most_crime, takes a crime type and searches through all the data to find out which county is the crime hotspot. The second function, get_demographic_info_by_county, looks up the demographics of any given county. It grabs things like average income, median age, education level, and other juicy details about the county's population. If there's no data for a county, it just gives back None. So, it's a nice mix of crime and census info.
+**demographics.py:** Analyze crime hotspots and county demographics in NJ.
 
-**weather.py** - This script is all about figuring out what crime happens most often in certain weather conditions or vice versa. The first function, 'most_common_crime_by_weather', takes the weather condition you give it, normalizes it (just in case you type it in weirdly), and then looks through the data to find the most common crime that happens in that weather. If it finds some data, it’ll tell you what crime is most common, otherwise, it’ll let you know that no data was found for that weather condition. The second function, 'most_common_weather_by_crime', works in the opposite direction. It takes the crime type, checks if it’s valid, and then finds the most common weather that happens when that crime occurs. Again, if there’s data for it, it tells you, and if not, it’ll tell you no data was found for that crime.
+get_county_with_most_crime: Finds the county with the highest crime for a given type.
+get_demographic_info_by_county: Fetches county demographics like income, age, and education.
 
+**weather.py:** Links crimes and weather patterns.
 
-**predictions.py** - This script is all about predicting crimes in New Jersey based on weather and demographics. The first function, 'predict_most_common_crime', takes in data about the weather and the county's demographics (like population density, family size, etc.) Then it spits out the most likely crime based on a model we trained earlier. It’s basically saying, “Hey, based on the weather and where you live, what crime do we expect most? The second function, 'train_crime_prediction_model', is where all the magic happens. It sets up a pipeline to preprocess the data: cleaning it up, scaling it, and encoding it in a way that makes sense for the model. Then, it splits the data into training and testing sets, trains a logistic regression model to predict crime, and evaluates its accuracy. So, you input some weather and demographic data, and the model tells you what crime is most likely to happen next.
+most_common_crime_by_weather: Finds the top crime for a specific weather type.
+most_common_weather_by_crime: Finds the most frequent weather during a specific crime.
+predictions.py: Predict NJ crimes based on weather and demographics.
+
+predict_most_common_crime: Predicts likely crimes using a trained model.
+train_crime_prediction_model: Trains and evaluates a logistic regression crime prediction model.
 
 # Future Plans: 
 
