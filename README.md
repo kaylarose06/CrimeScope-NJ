@@ -4,8 +4,11 @@ Developed by: Kayla Lugo and Anushka Singh
 
 CrimeScope NJ is an interactive web tool that allows users to examine crime statistics in New Jersey according to a number of criteria, including demographics, crime categories, and weather. The user has a number of possibilities, such as searching for the most frequent crimes by weather, figuring out which weather patterns correspond to which kinds of crimes, or getting demographic data about certain crimes. The application also enables users to forecast the most frequent crime by county and weather conditions, or by specific weather and demographic data. To help the user do these activities, the program offers an interactive, dialogue-style interface that presents real-time data insights in an easy-to-understand way.
 
-# Demo Video: 
+# Demo Video Backend: 
 https://youtu.be/8xeAs8dRwfY
+
+# Demo Video Frontend: 
+https://youtu.be/GXRI_2Xs_Hc
 
 # Setup Instructions: 
 
@@ -19,20 +22,42 @@ pip install scikit-learn pandas
 pip install pandas
 ```
 
+```
+pip install flask
+```
+
+
 **Update your file paths in testing.py:** 
 
 ```
-crime_data_file = "path_to_your_downloaded_csv_file.csv"
-fake_weather_file = "path_to_your_downloaded_csv_file.csv"
-demographic_data_file = "path_to_your_downloaded_csv_file.csv"
-output_file = "path_to_your_downloaded_csv_file.csv"
-cache_file = "path_to_your_downloaded_csv_file.csv"
+crime_data_file = '/yourpath/CrimeScope NJ/datasets/nj_simulated_crime_data_10000.csv'
+fake_weather_file = '/yourpath/CrimeScope NJ/datasets/fake_weather_data.csv'
+demographic_data_file = '/yourpath/CrimeScope NJ/datasets/nj_fake_demographic_data.csv'
+output_file = '/yourpath/CrimeScope NJ/datasets/merged_crime_weather_demographics.csv'
+cache_file = '/yourpath/CrimeScope NJ/datasets/weather_cache_testing.csv'
+
+```
+
+**Update your file paths in app.py:** 
+
+```
+
+sys.path.append('/yourpath/CrimeScope NJ')
+from weather import most_common_crime_by_weather
+
+sys.path.append('/yourpath/CrimeScope NJ')
+from demographics import get_county_with_most_crime, get_demographic_info_by_county
+
+app = Flask(__name__)
+
+merged_data = pd.read_csv('/yourpath/merged_crime_weather_demographics.csv')
 ```
 
 **To run:**
 
 ```
-python testing.py
+cd src       
+python app.py
 ```
 
 
