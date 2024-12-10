@@ -1,8 +1,10 @@
 # CrimeScope NJ
 
-Developed by: Kayla Lugo and Anushka Singh 
-
 CrimeScope NJ is an interactive web tool that allows users to examine crime statistics in New Jersey according to a number of criteria, including demographics, crime categories, and weather. The user has a number of possibilities, such as searching for the most frequent crimes by weather, figuring out which weather patterns correspond to which kinds of crimes, or getting demographic data about certain crimes. The application also enables users to forecast the most frequent crime by county and weather conditions, or by specific weather and demographic data. To help the user do these activities, the program offers an interactive, dialogue-style interface that presents real-time data insights in an easy-to-understand way.
+
+<img width="1676" alt="Screenshot 2024-12-10 at 12 16 47 AM" src="https://github.com/user-attachments/assets/6d6c3b50-6a5a-496b-9bba-57d239732eb2">
+<img width="1678" alt="Screenshot 2024-12-10 at 12 16 56 AM" src="https://github.com/user-attachments/assets/49c1e791-94b1-4216-a0b2-4c1d8d501e8f">
+
 
 # Demo Video Backend: 
 https://youtu.be/8xeAs8dRwfY
