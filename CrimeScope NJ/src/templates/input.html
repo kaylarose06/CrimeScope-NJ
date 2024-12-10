@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>CrimeScope NJ</title>
+  </head>
+  <body
+    style="
+      background-image: url('/static/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    "
+  >
+    <header class="header-title">
+      <img
+        src="{{ url_for('static', filename='logo.png') }}"
+        alt="CrimeScope NJ Logo"
+        class="logo"
+      />
+    </header>
+
+    <div class="container">
+      <!-- Start Page -->
+      <div id="start-page">
+        <button class="start" id="start-button">Start</button>
+      </div>
+
+      <div id="menu" style="display: none">
+        <h2>Welcome to CrimeScope NJ!</h2>
+        <button class="options" onclick="showWeatherQueryForm()">
+          1. Query most common crime by weather condition
+        </button>
+        <button class="options" onclick="showCrimeQueryForm()">
+          2. Query most common weather by crime type
+        </button>
+
+        <button class="options" onclick="showDemographicsQueryForm()">
+          3. Query demographic information by crime type
+        </button>
+        <button class="options" onclick="showPredictionForm()">
+          4. Predict most common crime based on weather and temperature
+        </button>
+        <button class="options" onclick="showCountyWeatherForm()">
+          5. Predict most common crime based on county and weather
+        </button>
+      </div>
+
+      <!-- Weather Query Form -->
+      <div id="weather-query-form" style="display: none">
+        <h2>Query Most Common Crime by Weather Condition</h2>
+        <p>Weather Conditions:</p>
+        <ul>
+          <li>Clear sky</li>
+          <li>Mainly clear</li>
+          <li>Partly cloudy</li>
+          <li>Overcast</li>
+          <li>Fog</li>
+          <li>Depositing rime fog</li>
+          <li>Drizzle: light</li>
+          <li>Drizzle: moderate</li>
+          <li>Drizzle: dense intensity</li>
+          <li>Rain: slight</li>
+          <li>Rain: moderate</li>
+          <li>Rain: heavy intensity</li>
+          <li>Snow fall: slight</li>
+          <li>Snow fall: moderate</li>
+          <li>Snow fall: heavy intensity</li>
+          <li>Thunderstorm: slight or moderate</li>
+        </ul>
+        <form action="/weather-query" method="post">
+          <label for="weather-condition">Enter a weather condition:</label>
+          <input
+            type="text"
+            id="weather-condition"
+            name="weather_condition"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+        <button id="back-button">Back</button>
+      </div>
+
+      <!-- Crime Type Query Form -->
+      <div id="crime-query-form" style="display: none">
+        <h2>Query Most Common Weather by Crime Type</h2>
+        <p>Crime Types:</p>
+        <ul>
+          <li>Theft</li>
+          <li>Shoplifting</li>
+          <li>Arson</li>
+          <li>Trespassing</li>
+          <li>Homicide</li>
+          <li>Vandalism</li>
+          <li>Sexual Assault</li>
+          <li>Burglary</li>
+          <li>Drug Possession</li>
+          <li>Domestic Violence</li>
+          <li>DUI</li>
+          <li>Identity Theft</li>
+          <li>Cybercrime</li>
+          <li>Kidnapping</li>
+          <li>Robbery</li>
+          <li>Public Intoxication</li>
+          <li>Weapons Violation</li>
+          <li>Assault</li>
+          <li>Fraud</li>
+        </ul>
+        <form action="/crime-query" method="post">
+          <label for="crime-type">Enter a crime type:</label>
+          <input type="text" id="crime-type" name="crime_type" required />
+          <button type="submit">Submit</button>
+        </form>
+        <button id="crime-query-back-button">Back</button>
+      </div>
+
+      <script>
+        // Show Crime Query Form
+        function showCrimeQueryForm() {
+          document.getElementById("menu").style.display = "none";
+          document.getElementById("crime-query-form").style.display = "block";
+        }
+
+        // Navigate back to the menu
+        document
+          .getElementById("crime-query-back-button")
+          .addEventListener("click", () => {
+            document.getElementById("crime-query-form").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+          });
+      </script>
+
+      <!-- Demographic Query Form -->
+      <div id="demographics-query-form" style="display: none">
+        <h2>Query Demographic Information by Crime Type</h2>
+        <p>Crime Types:</p>
+        <ul>
+          <li>Theft</li>
+          <li>Shoplifting</li>
+          <li>Arson</li>
+          <li>Trespassing</li>
+          <li>Homicide</li>
+          <li>Vandalism</li>
+          <li>Sexual Assault</li>
+          <li>Burglary</li>
+          <li>Drug Possession</li>
+          <li>Domestic Violence</li>
+          <li>DUI</li>
+          <li>Identity Theft</li>
+          <li>Cybercrime</li>
+          <li>Kidnapping</li>
+          <li>Robbery</li>
+          <li>Public Intoxication</li>
+          <li>Weapons Violation</li>
+          <li>Assault</li>
+          <li>Fraud</li>
+        </ul>
+        <form action="/demographics-query" method="post">
+          <label for="crime-type">Enter a crime type:</label>
+          <input type="text" id="crime-type" name="crime_type" required />
+          <button type="submit">Submit</button>
+        </form>
+        <button id="demographics-query-back-button">Back</button>
+      </div>
+
+      <!-- Crime Prediction Form -->
+      <div id="prediction-form" style="display: none">
+        <h2>Predict Most Common Crime Based on Weather and Demographics</h2>
+        <form action="/predict-crime" method="post">
+          <label for="temperature">Enter the temperature:</label>
+          <input type="number" id="temperature" name="temperature" required />
+
+          <label for="weather-condition">Enter weather condition:</label>
+          <input
+            type="text"
+            id="weather-condition"
+            name="weather_condition"
+            required
+          />
+
+          <p>Weather Conditions:</p>
+          <ul>
+            <li>Clear sky</li>
+            <li>Mainly clear</li>
+            <li>Partly cloudy</li>
+            <li>Overcast</li>
+            <li>Fog</li>
+            <li>Depositing rime fog</li>
+            <li>Drizzle: light</li>
+            <li>Drizzle: moderate</li>
+            <li>Drizzle: dense intensity</li>
+            <li>Rain: slight</li>
+            <li>Rain: moderate</li>
+            <li>Rain: heavy intensity</li>
+            <li>Snow fall: slight</li>
+            <li>Snow fall: moderate</li>
+            <li>Snow fall: heavy intensity</li>
+            <li>Thunderstorm: slight or moderate</li>
+          </ul>
+
+          <button type="submit">Submit</button>
+        </form>
+        <button id="prediction-back-button">Back</button>
+      </div>
+
+      <!-- County and Weather Prediction Form -->
+      <div id="county-weather-form" style="display: none">
+        <h2>Predict Most Common Crime Based on County and Weather</h2>
+        <form action="/predict-county-crime" method="post">
+          <label for="county">Enter a county:</label>
+          <input type="text" id="county" name="county" required />
+
+          <label for="weather-condition">Enter weather condition:</label>
+          <input
+            type="text"
+            id="weather-condition"
+            name="weather_condition"
+            required
+          />
+
+          <p>Weather Conditions:</p>
+          <ul>
+            <li>Clear sky</li>
+            <li>Mainly clear</li>
+            <li>Partly cloudy</li>
+            <li>Overcast</li>
+            <li>Fog</li>
+            <li>Depositing rime fog</li>
+            <li>Drizzle: light</li>
+            <li>Drizzle: moderate</li>
+            <li>Drizzle: dense intensity</li>
+            <li>Rain: slight</li>
+            <li>Rain: moderate</li>
+            <li>Rain: heavy intensity</li>
+            <li>Snow fall: slight</li>
+            <li>Snow fall: moderate</li>
+            <li>Snow fall: heavy intensity</li>
+            <li>Thunderstorm: slight or moderate</li>
+          </ul>
+
+          <button type="submit">Submit</button>
+        </form>
+        <button id="county-weather-back-button">Back</button>
+      </div>
+
+      <script>
+        // Show County and Weather Form
+        function showCountyWeatherForm() {
+          document.getElementById("menu").style.display = "none";
+          document.getElementById("county-weather-form").style.display =
+            "block";
+        }
+
+        // Navigate back to the menu
+        document
+          .getElementById("county-weather-back-button")
+          .addEventListener("click", () => {
+            document.getElementById("county-weather-form").style.display =
+              "none";
+            document.getElementById("menu").style.display = "block";
+          });
+      </script>
+
+      <script>
+        // Show Prediction Form
+        function showPredictionForm() {
+          document.getElementById("menu").style.display = "none";
+          document.getElementById("prediction-form").style.display = "block";
+        }
+
+        // Navigate back to the menu
+        document
+          .getElementById("prediction-back-button")
+          .addEventListener("click", () => {
+            document.getElementById("prediction-form").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+          });
+      </script>
+
+      <script>
+        // Show Demographics Query Form
+        function showDemographicsQueryForm() {
+          document.getElementById("menu").style.display = "none";
+          document.getElementById("demographics-query-form").style.display =
+            "block";
+        }
+
+        // Navigate back to the menu
+        document
+          .getElementById("demographics-query-back-button")
+          .addEventListener("click", () => {
+            document.getElementById("demographics-query-form").style.display =
+              "none";
+            document.getElementById("menu").style.display = "block";
+          });
+      </script>
+    </div>
+
+    <script>
+      // Show menu when Start button is clicked
+      document.getElementById("start-button").addEventListener("click", () => {
+        document.getElementById("start-page").style.display = "none";
+        document.getElementById("menu").style.display = "block";
+      });
+
+      // Show Weather Query Form
+      function showWeatherQueryForm() {
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("weather-query-form").style.display = "block";
+      }
+
+      // Navigate back to the menu
+      document.getElementById("back-button").addEventListener("click", () => {
+        document.getElementById("weather-query-form").style.display = "none";
+        document.getElementById("menu").style.display = "block";
+      });
+    </script>
+  </body>
+</html>

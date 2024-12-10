@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>CrimeScope NJ - Query Result</title>
+  </head>
+  <body style="
+  background-image: url('/static/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+">
+  </head>
+  <body>
+    <header class="header-title">
+      <img
+        src="{{ url_for('static', filename='logo.png') }}"
+        alt="CrimeScope NJ Logo"
+        class="logo"
+      />
+    </header>
+    <div class="container">
+      <h2>Query Result</h2>
+      <div class="result-box">{{ result|safe }}</div>
+      <a href="/">Back to Home</a>
+    </div>
+  </body>
+</html>
